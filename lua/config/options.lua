@@ -3,5 +3,5 @@
 -- Add any additional options here
 vim.opt.mouse = ""
 vim.wo.wrap = true
--- local opt = vim.opt
--- opt.spellang = { "en", "cjk" }
+local opt = vim.opt
+opt.spelllang = { "en", "cjk" }
