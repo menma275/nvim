@@ -100,8 +100,9 @@ return {
   -- add more treesitter parsers
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
+    opts = function(_, opts)
+      -- 必要なパーサーを追加
+      vim.list_extend(opts.ensure_installed, {
         "bash",
         "html",
         "javascript",
@@ -116,23 +117,13 @@ return {
         "typescript",
         "vim",
         "yaml",
-      },
-    },
+      })
+    end,
   },
 
   -- since `vim.tbl_deep_extend`, can only merge tables and not lists, the code above
   -- would overwrite `ensure_installed` with the new value.
   -- If you'd rather extend the default config, use the code below instead:
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = function(_, opts)
-      -- add tsx and treesitter
-      vim.list_extend(opts.ensure_installed, {
-        "tsx",
-        "typescript",
-      })
-    end,
-  },
 
   -- the opts function can also be used to change the default opts:
   {
