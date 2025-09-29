@@ -5,3 +5,4 @@ vim.opt.mouse = ""
 vim.wo.wrap = true
 local opt = vim.opt
 opt.spelllang = { "en", "cjk" }
+vim.opt.gdefault = true
