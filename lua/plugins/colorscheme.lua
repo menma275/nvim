@@ -9,16 +9,16 @@ return {
   --     require("onedark").load()
   --   end,
   -- },
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
-    config = function()
-      require("catppuccin").setup({
-        flavour = "mocha",
-      })
-    end,
-  },
+  -- {
+  --   "catppuccin/nvim",
+  --   name = "catppuccin",
+  --   priority = 1000,
+  --   config = function()
+  --     require("catppuccin").setup({
+  --       flavour = "mocha",
+  --     })
+  --   end,
+  -- },
   -- {
   --   "projekt0n/github-nvim-theme",
   --   name = "github-theme",
